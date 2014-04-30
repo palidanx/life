@@ -8,6 +8,11 @@ Bundler.require(:default, Rails.env)
 
 module Life
   class Application < Rails::Application
+    
+    
+    #adding lib dir for loading
+    config.autoload_paths += [config.root.join('lib')]
+    
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

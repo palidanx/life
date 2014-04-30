@@ -1,0 +1,25 @@
+<h1>Snapshots</h1>
+
+My JsFiddle URL : http://jsfiddle.net/palidanx/pYMjB/embedded/result/
+<br>
+
+Example of something that prints well: My JsFiddle URL : http://arshaw.com/js/fullcalendar-1.6.4/demos/agenda-views.html
+
+<br><br>
+
+<%= form_tag( calendar_phantomjs_snapshot_path(1) ) do %>
+  <%= label_tag(:url, "URL:") %>
+  <%= text_field_tag( :url, '', :size=>150) %>
+  
+  
+  <br>
+  <br>
+  <br>
+  <%= label_tag(:width, "width") %>
+  <%= text_field_tag(:width, 2000) %>
+  <br>
+  <%= label_tag(:height, "height") %>
+  <%= text_field_tag(:height, 1700) %>
+  <br>
+  <%= submit_tag("Submit") %>
+<% end %>

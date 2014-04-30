@@ -8,6 +8,21 @@
 </head>
 <body>
 
+<%if notice %> 
+					<div class="alert alert-success">
+			  		<button class="close" data-dismiss="alert">×</button>
+	<%=notice %>
+</div>
+	
+<%end%>
+ 	
+<%if alert %> 
+<div class="alert alert-error">
+	<button class="close" data-dismiss="alert">×</button>
+	<%=raw( alert) %>
+</div>
+<%end%>
+
 <%= yield %>
 
 </body>
