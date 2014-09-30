@@ -1,0 +1,21 @@
+<h1>Snapshots</h1>
+
+Upload your file and click submit
+<br><br>
+
+<%= form_tag( wkhtmltopdf_snapshot_upload_path(1), :multipart=>true ) do %>
+  <%= label_tag(:file, "File:") %>
+  <%= file_field_tag( :file) %><br>
+  <br>
+  <br>
+	 <%= label_tag(:args, "args") %>
+  <%= text_field_tag(:args, "-page-size A4", :size=>150 )%>
+  
+  <br>
+  <%= submit_tag("Submit") %>
+<% end %>
+
+<br><br>
+--page-height 279 --page-width 210 -O landscape -B 0mm -L 3mm -R 10mm -T 8mm -d 300
+<br>
+-page-size A4

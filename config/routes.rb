@@ -12,6 +12,13 @@ Life::Application.routes.draw do
         post 'calendar_phantomjs'
       end
   end
+  
+  resources :snapshot_uploads do
+       member do
+        post 'wkhtmltopdf'
+      end
+  end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
